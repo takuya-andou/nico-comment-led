@@ -18,11 +18,9 @@ preg_match("/>(.+?)<\/chat/",$niko,$retArr);
 
 exec('echo 1 > /sys/class/gpio/gpio7/value');
 exec('echo 1 > /sys/class/gpio/gpio8/value');
-exec('echo 1 > /sys/class/gpio/gpio21/value');
 usleep(500000);
 exec('echo 0 > /sys/class/gpio/gpio7/value');
 exec('echo 0 > /sys/class/gpio/gpio8/value');
-exec('echo 0 > /sys/class/gpio/gpio21/value');
 
 $kome = split(",",$retArr[1]);
 //7か8か
